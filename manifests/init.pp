@@ -12,7 +12,7 @@ class kibana::install {
         require => Package["nginx"],
     }
 
-    package { "kibana":
+    package { "kibana.d":
         ensure => latest,
         require => Package["php5-fpm"],
         notify => Class["kibana::config"]
